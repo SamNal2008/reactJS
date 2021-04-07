@@ -1,0 +1,27 @@
+
+.userEntry {
+      background-color: yellow;
+}
+
+.profileComp {
+      background-color: purple;
+}
+
+.captchaBloc {
+      background-color: rgb(241, 241, 241),
+}
+
+.PageComponent {
+      background-color: whitesmoke;
+      width: 40vw;
+      height: 40vh;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      align-items: space-between;
+}
+
+.myPic {
+      width: 2px;
+      height: 2px;
+}
