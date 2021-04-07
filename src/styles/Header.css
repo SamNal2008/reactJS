@@ -1,0 +1,15 @@
+.default-header {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 10%;
+}
+
+.default-header .header-text {
+    color: white;
+    font-size: 40px;
+}

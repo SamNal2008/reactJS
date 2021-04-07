@@ -2,23 +2,41 @@ import React, { useState, useRef } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import logo from '../logo.svg';
+import logo from '../moi.png';
 import '../styles/profile.css'
 
+const extractData = (data: any) => {
+    let res = [];
+    for (const elt in data) {
+        if (elt === 'Age')
+        {
+            res.push(<Typography>{elt} : {data[elt]} ans</Typography>);
+        }
+        else if (elt == 'Picture')
+        {
+            console.log('pic');
+        }
+        else
+        {
+            res.push(<Typography>{elt} : {data[elt]}</Typography>);
+        }
+    }
+    return res;
+}
 
 const ProfileComponent = () => {
     const [data, setData] = useState(
         {
-            name: 'Samy NALBANDIAN',
-            age: 22,
-            picture: logo,
+            Name: 'Samy NALBANDIAN',
+            Age: 22,
+            Picture: logo,
+            Login: 'samy.nalbandian'
         }
     );
 
-    return (<div className="profileComp">
-        <img alt="Girl in a jacket" width="100" height="100" src={data.picture}></img>
-        <Typography> {data.name}</Typography>
-        <Typography> {data.age} ans</Typography>
+    return (<div className="profileComponent">
+        <img alt="My pic" width="150" height="100" src={data.Picture}></img>
+        {extractData(data)}
         </div>
     );
 }
@@ -29,11 +47,9 @@ const UserEntryComponent = () => {
     return (
         <div className="userEntry">
             <TextField id="standard-basic" label="Ecrivez ici" value={userEntry} name="userText" onChange={(event) => {
-                event.preventDefault();
                 setEntry(event.target.value);
             }}/>
             <Button variant="contained" color="primary" onClick={(event) =>{
-                event.preventDefault();
                 setEntry('');
                 setTyped(userEntry);
             }}>
@@ -48,6 +64,7 @@ const UserEntryComponent = () => {
 const Page = () => {
     return (<div className="PageComponent">
         <ProfileComponent/>
+        <br/>
         <UserEntryComponent/>
         </div>
     )

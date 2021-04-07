@@ -1,10 +1,11 @@
 
 .userEntry {
-      background-color: yellow;
+      background-color: whitesmoke;
 }
 
-.profileComp {
-      background-color: purple;
+.profileComponent {
+      display: flex;
+      flex-direction: column;
 }
 
 .captchaBloc {
@@ -12,13 +13,14 @@
 }
 
 .PageComponent {
-      background-color: whitesmoke;
+      background-color: white;
+      border-radius: 5%;
       width: 40vw;
       height: 40vh;
       display: flex;
       flex-flow: column wrap;
-      justify-content: space-between;
-      align-items: space-between;
+      justify-content: center;
+      align-items: center;
 }
 
 .myPic {

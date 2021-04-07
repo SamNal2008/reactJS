@@ -1,8 +1,9 @@
 .App {
-  background-color: rgb(224, 224, 224);
+  background-color: whitesmoke;
   width: 100vw;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex-direction: column;
 }
